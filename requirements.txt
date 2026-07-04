@@ -1,0 +1,11 @@
+
+pandas
+scikit-learn
+joblib
+mlflow
+fastapi
+uvicorn
+pydantic
+prometheus_client
+prometheus_fastapi_instrumentator
+requests
