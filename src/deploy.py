@@ -1,10 +1,14 @@
 import mlflow
 from mlflow.tracking import MlflowClient
 
-MODEL_NAME = "taxi_model"   # <-- must match your registered model name
-METRIC = "rmse"             # <-- must match the metric logged in train.py
-LOWER_IS_BETTER = True      # True for rmse/mae, False for accuracy/r2
 
+
+mlflow.set_tracking_uri('sqlite:///mlflow.db')   # same db train.py wrote
+MODEL_NAME = "taxi_model"
+METRIC = "mae"
+LOWER_IS_BETTER = True
+client = MlflowClient()
+...
 client = MlflowClient()
 
 # latest registered version (any stage), by version number
